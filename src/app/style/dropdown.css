@@ -1,0 +1,36 @@
+.dropdown-main{
+    padding-bottom: 10px;
+}
+.drop-container {
+    width: 250px;
+    padding: 0.62rem;
+    border-radius: 0.5rem;
+    background: #F2F2F2;
+    user-select: none;
+}
+
+
+.dropdown-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icon-group{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.drop-container .icon{
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+.drop-container .subitems{
+    margin-top: 10px;
+    padding-left: 0.2rem;
+}
+
+.subitems .dropdown-item{
+    padding-top: 12px;
+}

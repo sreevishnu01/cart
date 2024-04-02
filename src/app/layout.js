@@ -1,6 +1,7 @@
 import { Poppins } from "next/font/google";
 import "./style/main.css";
 import "./style/card.css";
+import "./style/dropdown.css";
 
 const poppins = Poppins({
   subsets: ["latin"], // Add additional subsets as needed
