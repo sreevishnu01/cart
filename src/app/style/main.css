@@ -1,0 +1,13 @@
+:root{
+    --primary-color: white;
+    --font-poppins: var(${poppins.variable});
+
+}
+
+body{
+    background: #EBEBEB;
+    font-family: var(--font-poppins);
+}
+p{
+    margin: 1px;
+}
