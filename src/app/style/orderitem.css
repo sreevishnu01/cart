@@ -1,0 +1,41 @@
+.order-item{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-item .img{
+    position: relative;
+    width: 4rem;
+    height: 4rem;   
+}
+
+.order-item .btn{
+    border-radius: 0.125rem;
+    background: #3C3C3C;
+    padding: 4px 8px;
+}
+.order-item .btn p{
+    color: #FFF;
+    font-size: 0.625rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 0.625rem */
+}
+
+.order-item .info .product-name{
+    color: #000;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 0.75rem */
+}
+.order-item .info .price{
+    color: #A4A4A4;
+
+font-size: 0.75rem;
+font-style: normal;
+font-weight: 500;
+line-height: 100%; /* 0.75rem */
+}
