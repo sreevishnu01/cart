@@ -8,3 +8,8 @@
   grid-template-columns: 18% 60% auto;
   gap: 12px;
 }
+@media (max-width: 768px) {
+  .mainlayout {
+    grid-template-columns: 1fr;
+  }
+}

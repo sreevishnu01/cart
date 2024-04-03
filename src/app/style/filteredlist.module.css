@@ -32,4 +32,7 @@
   .gridcontainer {
     grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
   }
+  .searchbar {
+    display: none;
+  }
 }
