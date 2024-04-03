@@ -1,5 +1,7 @@
 .card{
-    width: 226px;
+    min-width: 226px;
+    max-width: 336;
+    width: 100%;
     position: relative;
     padding: 12px;
     overflow: hidden;
@@ -13,7 +15,7 @@
 
 .card .img-container{
     position: relative;
-    width: 226px;
+    min-width: 226px;
     height: 154px;
 }
 
