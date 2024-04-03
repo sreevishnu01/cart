@@ -3,7 +3,7 @@ import Category from "./Category";
 import Filteredlist from "./Filteredlist";
 import Orderlist from "./Orderlist";
 import styles from "../style/homelayout.module.css";
-import Bar from "./bar";
+import Bar from "./Bar";
 const HomeLayout = () => {
   return (
     <div className={styles.maincontainer}>

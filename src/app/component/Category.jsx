@@ -4,7 +4,6 @@ import Dropdown from "./Dropdown";
 import styles from "../style/category.module.css";
 import Image from "next/image";
 import DropdownMobile from "./DropdownMobile";
-import BottomFilterComponet from "./bottomFilterComponet";
 import Modal from "./Modal";
 import Orderlist from "./Orderlist";
 
@@ -37,11 +36,7 @@ const Category = () => {
       <div className="desktop">
         <Dropdown />
       </div>
-      {isModalOpen && (
-        <Modal onClose={toggleModalCart}>
-          <BottomFilterComponet />
-        </Modal>
-      )}
+
       {isModalCartOpen && (
         <Modal onClose={toggleModalCart}>
           <Orderlist ismobile={true} />
