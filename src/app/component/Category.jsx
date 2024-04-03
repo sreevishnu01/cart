@@ -1,8 +1,11 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
 import Dropdown from './Dropdown';
 import styles from '../style/category.module.css';
 import Image from 'next/image';
 import DropdownMobile from './DropdownMobile';
+import BottomFilterComponet from './bottomFilterComponet';
+import Modal from './Modal';
 
 const Category = () => {
   const [isModalOpen, setIsModalOpen] = useState(true);
@@ -29,6 +32,11 @@ const Category = () => {
       <div className="desktop">
         <Dropdown />
       </div>
+      {isModalOpen && (
+        <Modal onClose={toggleModal}>
+          <BottomFilterComponet />
+        </Modal>
+      )}
     </div>
   );
 };
