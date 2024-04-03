@@ -2,7 +2,7 @@
     padding-bottom: 10px;
 }
 .drop-container {
-    width: 250px;
+    min-width: 12.5rem;
     padding: 0.62rem;
     border-radius: 0.5rem;
     background: #F2F2F2;

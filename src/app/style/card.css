@@ -1,7 +1,7 @@
 .card{
     min-width: 226px;
-    max-width: 336;
-    width: 100%;
+    /* max-width: 336; */
+    width: 90%;
     position: relative;
     padding: 12px;
     overflow: hidden;
@@ -38,8 +38,8 @@
 }
 
 .card .discription{
-    width: 11.375rem;
-    font-size: 0.375rem;
+    width: 80%;
+    font-size: 0.575rem;
     font-style: normal;
     font-weight: 300;
     line-height: 100%; /* 0.375rem */

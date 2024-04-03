@@ -1,5 +1,5 @@
 .order-item{
-    width: 300px;
+    min-width: 18.75rem;
     /* height: 64px; */
     display: flex;
     justify-content: space-between;
