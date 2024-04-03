@@ -50,6 +50,15 @@ function Card({ img }) {
           </div>
           <button className="cart-btn">
             <p>Add To Cart</p>
+            <div className="icon">
+              <Image
+                src="/assets/icons/cart.svg"
+                alt="Picture of the author"
+                fill
+                style={{ aspectRatio: "calc(400/300)" }}
+              />
+            </div>
+            <p className="mobile">Cart</p>
           </button>
         </div>
       </div>
