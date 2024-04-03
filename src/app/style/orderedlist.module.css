@@ -11,3 +11,9 @@
   gap: 10px;
   flex-direction: column;
 }
+.headingcontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
