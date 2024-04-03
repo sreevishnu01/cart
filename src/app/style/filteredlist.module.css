@@ -11,6 +11,15 @@
   align-self: stretch;
 }
 
+.search_container{
+  position: relative;
+}
+.search_icon{
+  position: absolute;
+  top: 20%;
+  left: 90%;
+}
+
 .searchbar {
   display: flex;
   width: 401px;
@@ -21,6 +30,7 @@
   gap: 10px;
   border-radius: 20px;
   background: #ececec;
+  border: #ececec;
 }
 
 .gridcontainer {
