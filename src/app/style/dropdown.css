@@ -1,4 +1,5 @@
 .dropdown-main{
+    display: block;
     padding-bottom: 10px;
     transition: all 1s ease-in-out;
 }
@@ -45,3 +46,38 @@
     from { opacity: 0; height: auto; }
     to { opacity: 1; height: auto; } /* Or set a specific height */
   }
+
+
+/* DropdownMobile */
+
+.dropdown-mobile{
+    display: none;
+
+}
+
+.desktop{
+    display: block;
+}
+
+@media (max-width:712px) {
+    .dropdown-mobile{
+        position: relative;
+        width: 50vh;
+        display: flex;
+        gap: 1rem;
+        overflow-x: scroll;
+    
+    }
+
+    .dropdown-mobile::-webkit-scrollbar { /* For Chrome, Safari, and Opera */
+        display: none;
+      }
+    .desktop{
+        display: none;
+    }
+
+    .drop-container{
+        width: max-content;
+    }
+
+}

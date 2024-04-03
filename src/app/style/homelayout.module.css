@@ -2,6 +2,8 @@
   display: flex;
   gap: 20px;
   flex-direction: column;
+  overflow-x: hidden;
+
 }
 .mainlayout {
   display: grid;

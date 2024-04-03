@@ -3,3 +3,27 @@
   border-radius: 10px;
   padding: 20px;
 }
+
+.category .title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category .icon_container{
+  background: #222;
+  padding: .3rem .4rem;
+}
+
+.category .icon{
+  background: #222;
+  position: relative;
+  width: 1rem;
+  height: 1rem;
+}
+
+@media (max-width:762px) {
+  .category{
+    width: fit-content;
+  }
+}
