@@ -120,3 +120,51 @@ export const category = [
     ],
   },
 ];
+
+export const product = [
+  {
+    title: "Table",
+    discription: "",
+    img: "/assets/card/card1.png",
+  },
+  {
+    title: "Table",
+    discription: "",
+    img: "/assets/card/card2.png",
+  },
+  {
+    title: "Table",
+    discription: "",
+    img: "/assets/card/card3.png",
+  },
+  {
+    title: "Table",
+    discription: "",
+    img: "/assets/card/card4.png",
+  },
+  {
+    title: "Table",
+    discription: "",
+    img: "/assets/card/card5.png",
+  },
+  {
+    title: "Table",
+    discription: "",
+    img: "/assets/card/card6.png",
+  },
+  {
+    title: "Table",
+    discription: "",
+    img: "/assets/card/card7.png",
+  },
+  {
+    title: "Table",
+    discription: "",
+    img: "/assets/card/card8.png",
+  },
+  {
+    title: "Table",
+    discription: "",
+    img: "/assets/card/card9.png",
+  },
+];
