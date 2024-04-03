@@ -1,6 +1,9 @@
 .dropdown-main{
     padding-bottom: 10px;
+    transition: all 1s ease-in-out;
 }
+
+
 .drop-container {
     min-width: 12.5rem;
     padding: 0.62rem;
@@ -29,8 +32,16 @@
 .drop-container .subitems{
     margin-top: 10px;
     padding-left: 0.2rem;
+    transition: all 1s ease-in-out;
+    animation: fadeInHeight 0.2s ease-in-out forwards;
 }
 
 .subitems .dropdown-item{
     padding-top: 12px;
 }
+
+
+  @keyframes fadeInHeight {
+    from { opacity: 0; height: auto; }
+    to { opacity: 1; height: auto; } /* Or set a specific height */
+  }
