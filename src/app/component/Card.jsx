@@ -22,7 +22,7 @@ function Card({ img }) {
           src={img ? img : "/assets/card/card1.png"}
           alt="Picture of the author"
           fill
-          style={{ aspectRatio: "calc(400/300)" }}
+          // style={{ aspectRatio: "calc(400/300)" }}
         />
       </div>
       <div className="content">

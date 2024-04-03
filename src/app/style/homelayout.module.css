@@ -9,10 +9,12 @@
   display: grid;
   grid-template-columns: 18% 60% auto;
   gap: 12px;
+  overflow: hidden;
   
 }
 @media (max-width: 768px) {
   .mainlayout {
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */
+    display: block;
   }
 }

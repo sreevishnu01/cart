@@ -62,7 +62,7 @@
 @media (max-width:768px) {
     .dropdown-mobile{
         position: relative;
-        width: 96vw;
+        width: 94vw;
         display: flex;
         gap: 1rem;
         overflow-x: scroll;
