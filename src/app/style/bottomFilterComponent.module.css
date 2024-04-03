@@ -1,7 +1,10 @@
-.bottomFilterComponet {
+.main_container{
+  background: white;
+}
+.bottocomponet {
   display: none;
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
   left: 0;
   right: 0;
   padding: 24px 0px;
@@ -27,11 +30,14 @@
 .filterContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding: 0px 33px;
+
 }
 
+
 @media (max-width: 768px) {
-  .bottomFilterComponet {
+  .bottocomponet {
     display: flex;
   }
 }

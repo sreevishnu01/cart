@@ -2,15 +2,25 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { category } from "../utilss/data";
+import Modal from "./Modal";
+import BottomFilterComponent from "./BottomFilterComponet";
+import Modalforfilter from "./Modalforfilter";
 
 function DropdownMobile() {
   const [activeItem, setActiveItem] = useState(false); // State to manage dropdown visibility
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleDropdown = (item) => {
     if (activeItem === item) {
-      return setActiveItem(false);
+      setActiveItem(false);
+      return setIsModalOpen(false);
     }
     setActiveItem(item);
+    setIsModalOpen(!isModalOpen);
+  };
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
   };
   return (
     <>
@@ -54,6 +64,11 @@ function DropdownMobile() {
             </div>
           </div>
         ))}
+        {isModalOpen && (
+          <Modalforfilter onClose={toggleModal}>
+            <BottomFilterComponent />
+          </Modalforfilter>
+        )}
       </div>
     </>
   );

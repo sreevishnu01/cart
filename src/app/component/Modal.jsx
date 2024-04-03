@@ -5,8 +5,10 @@ import styles from "../style/modal.module.css";
 const Modal = ({ children, onClose }) => {
   return (
     <div className={styles.overlay}>
-      <div className={styles.close} onClick={onClose}>
-        X
+      <div className="mobile">
+        <div className={styles.close} onClick={onClose}>
+          X
+        </div>
       </div>
       {children}
     </div>

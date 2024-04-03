@@ -30,6 +30,11 @@ p{
 }
 
 
+.checkbox-container{
+    min-width: 50%;
+    display: flex;
+    gap: 5px;
+}
 
 @media (max-width:768px) {
     body{
