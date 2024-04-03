@@ -6,18 +6,23 @@ import Image from "next/image";
 import DropdownMobile from "./DropdownMobile";
 import BottomFilterComponet from "./bottomFilterComponet";
 import Modal from "./Modal";
+import Orderlist from "./Orderlist";
 
 const Category = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalCartOpen, setIsModalCartOpen] = useState(false);
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
+  };
+  const toggleModalCart = () => {
+    setIsModalCartOpen(!isModalCartOpen);
   };
   return (
     <div className={styles.category}>
       <div className={styles.title}>
         <h2>Category</h2>
-        <div className={styles.icon_container}>
+        <div className={styles.icon_container} onClick={toggleModalCart}>
           <div className={styles.icon}>
             <Image
               src="/assets/icons/cart.svg"
@@ -33,8 +38,13 @@ const Category = () => {
         <Dropdown />
       </div>
       {isModalOpen && (
-        <Modal onClose={toggleModal}>
+        <Modal onClose={toggleModalCart}>
           <BottomFilterComponet />
+        </Modal>
+      )}
+      {isModalCartOpen && (
+        <Modal onClose={toggleModalCart}>
+          <Orderlist ismobile={true} />
         </Modal>
       )}
     </div>

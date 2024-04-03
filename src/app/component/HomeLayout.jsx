@@ -11,7 +11,10 @@ const HomeLayout = () => {
       <div className={styles.mainlayout}>
         <Category />
         <Filteredlist />
-        <Orderlist />
+
+        <div className="desktop">
+          <Orderlist />
+        </div>
       </div>
     </div>
   );
