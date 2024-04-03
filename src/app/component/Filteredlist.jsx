@@ -1,6 +1,7 @@
-import React from 'react';
-import Card from './Card';
-import styles from '../style/filteredlist.module.css';
+import React from "react";
+import Card from "./Card";
+import styles from "../style/filteredlist.module.css";
+import { product } from "../utilss/data";
 const items = [];
 const Filteredlist = () => {
   return (
@@ -23,9 +24,11 @@ const Filteredlist = () => {
         </div>
       </div>
       <div className={styles.gridcontainer}>
-        <Card />
-        <Card />
-        <Card />
+        {product.map((items, index) => (
+          <div key={index}>
+            <Card img={items.img} />
+          </div>
+        ))}
       </div>
     </div>
   );

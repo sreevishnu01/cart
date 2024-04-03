@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-function Card() {
+function Card({ img }) {
   const [count, setCount] = useState(0); // Initialize state for count
 
   const handleDecrement = () => {
@@ -19,7 +19,7 @@ function Card() {
     <div className="card">
       <div className="img-container">
         <Image
-          src="/assets/card/card1.png"
+          src={img ? img : "/assets/card/card1.png"}
           alt="Picture of the author"
           fill
           style={{ aspectRatio: "calc(400/300)" }}
