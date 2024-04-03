@@ -1,0 +1,10 @@
+.maincontainer {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+.mainlayout {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
