@@ -1,10 +1,15 @@
-import React from "react";
-import Dropdown from "./Dropdown";
-import styles from "../style/category.module.css";
-import Image from "next/image";
-import DropdownMobile from "./DropdownMobile";
+import React from 'react';
+import Dropdown from './Dropdown';
+import styles from '../style/category.module.css';
+import Image from 'next/image';
+import DropdownMobile from './DropdownMobile';
 
 const Category = () => {
+  const [isModalOpen, setIsModalOpen] = useState(true);
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
   return (
     <div className={styles.category}>
       <div className={styles.title}>
@@ -15,7 +20,7 @@ const Category = () => {
               src="/assets/icons/cart.svg"
               alt="Picture of the author"
               fill
-              style={{ aspectRatio: "calc(400/300)" }}
+              style={{ aspectRatio: 'calc(400/300)' }}
             />
           </div>
         </div>

@@ -1,0 +1,38 @@
+.bottomFilterComponet {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 0px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 34px;
+  background-color: white;
+}
+
+.applyBtn {
+  display: flex;
+  width: 116px;
+  padding: 8px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  border-radius: 4px;
+  background: #222;
+  color: #fff;
+}
+
+.filterContainer {
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .bottomFilterComponet {
+    display: flex;
+  }
+}
