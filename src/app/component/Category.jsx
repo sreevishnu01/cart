@@ -1,14 +1,14 @@
-'use client';
-import React, { useState } from 'react';
-import Dropdown from './Dropdown';
-import styles from '../style/category.module.css';
-import Image from 'next/image';
-import DropdownMobile from './DropdownMobile';
-import BottomFilterComponet from './bottomFilterComponet';
-import Modal from './Modal';
+"use client";
+import React, { useState } from "react";
+import Dropdown from "./Dropdown";
+import styles from "../style/category.module.css";
+import Image from "next/image";
+import DropdownMobile from "./DropdownMobile";
+import BottomFilterComponet from "./bottomFilterComponet";
+import Modal from "./Modal";
 
 const Category = () => {
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen);
@@ -23,7 +23,7 @@ const Category = () => {
               src="/assets/icons/cart.svg"
               alt="Picture of the author"
               fill
-              style={{ aspectRatio: 'calc(400/300)' }}
+              style={{ aspectRatio: "calc(400/300)" }}
             />
           </div>
         </div>

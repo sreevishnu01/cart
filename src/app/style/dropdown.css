@@ -59,10 +59,10 @@
     display: block;
 }
 
-@media (max-width:712px) {
+@media (max-width:768px) {
     .dropdown-mobile{
         position: relative;
-        width: 50vh;
+        width: 96vw;
         display: flex;
         gap: 1rem;
         overflow-x: scroll;
