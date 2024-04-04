@@ -1,6 +1,6 @@
-import React from 'react';
-import OrderItem from './OrderItem';
-import styles from '../style/orderedlist.module.css';
+import React from "react";
+import OrderItem from "./OrderItem";
+import styles from "../style/orderedlist.module.css";
 const Orderlist = ({ cart, ismobile }) => {
   // const cartLengthv = cart.length();
 
@@ -12,32 +12,34 @@ const Orderlist = ({ cart, ismobile }) => {
       </div>
       <div className={styles.itemcontainer}>
         {cart?.map((item, index) => (
-          <OrderItem />
+          <div key={index}>
+            <OrderItem />
+          </div>
         ))}
       </div>
       <div>
         <hr
           style={{
-            width: '100%',
-            height: '1px',
-            background: '#C1C1C1',
-            border: 'none',
-            marginBlock: '24px',
+            width: "100%",
+            height: "1px",
+            background: "#C1C1C1",
+            border: "none",
+            marginBlock: "24px",
           }}
         />
         <div
           style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            fontWeight: '500',
-            fontSize: '20px',
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            fontWeight: "500",
+            fontSize: "20px",
           }}
         >
           <h3>Total</h3>
           <h3
             style={{
-              color: '#383838',
+              color: "#383838",
             }}
           >
             {cart?.length ? cart.length * 20.27 : null}
