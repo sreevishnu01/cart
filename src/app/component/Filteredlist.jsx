@@ -1,15 +1,33 @@
-import React from "react";
-import Card from "./Card";
-import styles from "../style/filteredlist.module.css";
-import { product } from "../utilss/data";
+'use client';
+import React, { useEffect, useState } from 'react';
+import Card from './Card';
+import styles from '../style/filteredlist.module.css';
+import { product } from '../utilss/data';
 const items = [];
-const Filteredlist = () => {
+const Filteredlist = ({ addtocart }) => {
+  const [search, setSearch] = useState('');
+  const [productItems, setProductItems] = useState(product);
+
+  const filterProduct = (searchinput) => {
+    return product.filter((item) =>
+      item.title.toLowerCase().includes(searchinput.toLowerCase())
+    );
+  };
+
+  useEffect(() => {
+    const data = filterProduct(search);
+    setProductItems(data);
+  }, [search]);
   return (
     <div className={styles.container}>
       <div className={styles.headingcontainer}>
         <h2>Filtered Result</h2>
         <div className={styles.search_container}>
-          <input type="text" className={styles.searchbar} />
+          <input
+            type="text"
+            className={styles.searchbar}
+            onChange={(e) => setSearch(e.target.value)}
+          />
           <div className={styles.search_icon}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -27,9 +45,9 @@ const Filteredlist = () => {
         </div>
       </div>
       <div className={styles.gridcontainer}>
-        {product.map((items, index) => (
+        {productItems.map((items, index) => (
           <div key={index}>
-            <Card img={items.img} />
+            <Card item={items} img={items.img} addtocart={addtocart} />
           </div>
         ))}
       </div>

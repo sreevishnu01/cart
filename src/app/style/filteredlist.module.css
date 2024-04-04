@@ -4,7 +4,6 @@
   padding: 12px 18px;
   border-radius: 10px;
   overflow-x: hidden;
-
 }
 
 .headingcontainer {
@@ -15,11 +14,10 @@
   padding-bottom: 16px;
 }
 
-
-.search_container{
+.search_container {
   position: relative;
 }
-.search_icon{
+.search_icon {
   position: absolute;
   top: 20%;
   left: 90%;
@@ -41,10 +39,10 @@
 .gridcontainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
-  gap: 20px;
+  gap: 10px;
 }
 @media (max-width: 768px) {
-  .container{
+  .container {
     padding: 12px 16px;
   }
   .gridcontainer {
@@ -54,7 +52,7 @@
   .searchbar {
     display: none;
   }
-  .search_container{
+  .search_container {
     display: none;
   }
 }

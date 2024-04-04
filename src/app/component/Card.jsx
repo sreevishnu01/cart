@@ -1,8 +1,8 @@
-"use client";
-import Image from "next/image";
-import { useState } from "react";
+'use client';
+import Image from 'next/image';
+import { useState } from 'react';
 
-function Card({ img }) {
+function Card({ item, img, addtocart }) {
   const [count, setCount] = useState(0); // Initialize state for count
 
   const handleDecrement = () => {
@@ -19,7 +19,7 @@ function Card({ img }) {
     <div className="card">
       <div className="img-container">
         <Image
-          src={img ? img : "/assets/card/card1.png"}
+          src={img ? img : '/assets/card/card1.png'}
           alt="Picture of the author"
           fill
           // style={{ aspectRatio: "calc(400/300)" }}
@@ -28,7 +28,7 @@ function Card({ img }) {
       <div className="content">
         <div>
           <div className="title">
-            <p>Table</p>
+            <p>{item.title}</p>
             <p>T1</p>
           </div>
           <p className="discription">
@@ -48,14 +48,14 @@ function Card({ img }) {
               +
             </div>
           </div>
-          <button className="cart-btn">
+          <button className="cart-btn" onClick={() => addtocart(item)}>
             <p>Add To Cart</p>
             <div className="icon">
               <Image
                 src="/assets/icons/cart.svg"
                 alt="Picture of the author"
                 fill
-                style={{ aspectRatio: "calc(400/300)" }}
+                style={{ aspectRatio: 'calc(400/300)' }}
               />
             </div>
             <p className="mobile">Cart</p>

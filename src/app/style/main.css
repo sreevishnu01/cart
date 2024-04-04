@@ -1,14 +1,13 @@
-:root{
-    --primary-color: white;
-    --font-poppins: var(${poppins.variable});
-
+:root {
+  --primary-color: white;
+  --font-poppins: var(${poppins.variable});
 }
 
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
 html,
 body {
@@ -16,28 +15,27 @@ body {
   overflow-x: hidden;
 }
 
-body{
-    box-sizing: border-box;
-    background: #EBEBEB;
-    font-family: var(--font-poppins);
-    overflow-x: hidden;
-    width: 100vw;
-    margin: 0;
-    padding: 0;
+body {
+  box-sizing: border-box;
+  background: #ebebeb;
+  font-family: var(--font-poppins);
+  overflow-x: hidden;
+  width: 100vw;
+  margin: 0;
+  padding: 12px;
 }
-p{
-    margin: 1px;
-}
-
-
-.checkbox-container{
-    min-width: 50%;
-    display: flex;
-    gap: 5px;
+p {
+  margin: 1px;
 }
 
-@media (max-width:768px) {
-    body{
-        background-color: white;
-    }
+.checkbox-container {
+  min-width: 50%;
+  display: flex;
+  gap: 5px;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-color: white;
+  }
 }
