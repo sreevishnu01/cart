@@ -1,13 +1,13 @@
-'use client';
-import React, { useState } from 'react';
-import Dropdown from './Dropdown';
-import styles from '../style/category.module.css';
-import Image from 'next/image';
-import DropdownMobile from './DropdownMobile';
-import Modal from './Modal';
-import Orderlist from './Orderlist';
+"use client";
+import React, { useState } from "react";
+import Dropdown from "./Dropdown";
+import styles from "../style/category.module.css";
+import Image from "next/image";
+import DropdownMobile from "./DropdownMobile";
+import Modal from "./Modal";
+import Orderlist from "./Orderlist";
 
-const Category = ({ cart }) => {
+const Category = ({ cart, removeFromCart }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalCartOpen, setIsModalCartOpen] = useState(false);
 
@@ -27,7 +27,7 @@ const Category = ({ cart }) => {
               src="/assets/icons/cart.svg"
               alt="Picture of the author"
               fill
-              style={{ aspectRatio: 'calc(400/300)' }}
+              style={{ aspectRatio: "calc(400/300)" }}
             />
           </div>
         </div>
@@ -39,7 +39,11 @@ const Category = ({ cart }) => {
 
       {isModalCartOpen && (
         <Modal onClose={toggleModalCart}>
-          <Orderlist cart={cart} ismobile={true} />
+          <Orderlist
+            cart={cart}
+            ismobile={true}
+            removeFromCart={removeFromCart}
+          />
         </Modal>
       )}
     </div>

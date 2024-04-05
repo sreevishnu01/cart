@@ -37,7 +37,7 @@
 
 .card .discription {
   width: 80%;
-  font-size: 0.675rem;
+  font-size: 0.775rem;
   font-style: normal;
   font-weight: 300;
   line-height: 100%; /* 0.375rem */
@@ -168,7 +168,7 @@ line-height: 100%;
   }
 
   .card .discription {
-    font-size: 0.3125rem;
+    font-size: 0.5125rem;
     font-weight: 300;
     line-height: 100%; /* 0.3125rem */
   }

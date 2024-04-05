@@ -24,5 +24,7 @@
 }
 
 @media (max-width:768px) {
-
+  .category{
+    padding: 0;
+  }
 }

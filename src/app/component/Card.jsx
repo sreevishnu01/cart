@@ -1,6 +1,6 @@
-'use client';
-import Image from 'next/image';
-import { useState } from 'react';
+"use client";
+import Image from "next/image";
+import { useState } from "react";
 
 function Card({ item, img, addtocart }) {
   const [count, setCount] = useState(0); // Initialize state for count
@@ -19,7 +19,7 @@ function Card({ item, img, addtocart }) {
     <div className="card">
       <div className="img-container">
         <Image
-          src={img ? img : '/assets/card/card1.png'}
+          src={img ? img : "/assets/card/card1.png"}
           alt="Picture of the author"
           fill
           // style={{ aspectRatio: "calc(400/300)" }}
@@ -33,7 +33,7 @@ function Card({ item, img, addtocart }) {
           </div>
           <p className="discription">
             Aesthetic conference chair, elegant plywood curvature shell design
-            is emphasized with interior padding for superior comfort.
+            is
           </p>
         </div>
         <p className="price">AED 20.27</p>
@@ -55,7 +55,7 @@ function Card({ item, img, addtocart }) {
                 src="/assets/icons/cart.svg"
                 alt="Picture of the author"
                 fill
-                style={{ aspectRatio: 'calc(400/300)' }}
+                style={{ aspectRatio: "calc(400/300)" }}
               />
             </div>
             <p className="mobile">Cart</p>

@@ -6,6 +6,9 @@
   height: 100%;
 }
 
+.itemcontainer1 {
+  margin: 10px;
+}
 .itemcontainer {
   display: flex;
   justify-content: center;

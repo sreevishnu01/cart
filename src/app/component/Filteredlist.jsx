@@ -1,11 +1,11 @@
-'use client';
-import React, { useEffect, useState } from 'react';
-import Card from './Card';
-import styles from '../style/filteredlist.module.css';
-import { product } from '../utilss/data';
+"use client";
+import React, { useEffect, useState } from "react";
+import Card from "./Card";
+import styles from "../style/filteredlist.module.css";
+import { product } from "../utilss/data";
 const items = [];
 const Filteredlist = ({ addtocart }) => {
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
   const [productItems, setProductItems] = useState(product);
 
   const filterProduct = (searchinput) => {
@@ -21,7 +21,7 @@ const Filteredlist = ({ addtocart }) => {
   return (
     <div className={styles.container}>
       <div className={styles.headingcontainer}>
-        <h2>Filtered Result</h2>
+        <h2 className="desktop">Filtered Result</h2>
         <div className={styles.search_container}>
           <input
             type="text"
