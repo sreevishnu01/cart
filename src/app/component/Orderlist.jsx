@@ -6,6 +6,22 @@ const Orderlist = ({ cart, ismobile, removeFromCart }) => {
   // const cartLengthv = cart.length();
 
   const releted = [1, 2, 3, 4];
+
+  const uniqueCart = cart.filter((item, index) => cart.indexOf(item) === index);
+  // const itemCount = cart.filter((cartItem) => cartItem.id === item.id).length;
+
+  const carsWithQuantity = cart.reduce((acc, car) => {
+    const existingIndex = acc.findIndex((item) => item.id === car.id);
+
+    if (existingIndex !== -1) {
+      acc[existingIndex].quantity = (acc[existingIndex].quantity || 0) + 1; // Increment quantity for existing item
+    } else {
+      acc.push({ ...car, quantity: 1 }); // Create new object with quantity 1
+    }
+
+    return acc;
+  }, []);
+  console.log(carsWithQuantity);
   return (
     <div className={styles.maincontainer}>
       <div className="desktop">
@@ -29,9 +45,13 @@ const Orderlist = ({ cart, ismobile, removeFromCart }) => {
       {cart?.length > 0 ? (
         <div>
           <div>
-            {cart?.map((item, index) => (
+            {carsWithQuantity?.map((item, index) => (
               <div key={index} className={styles.itemcontainer1}>
-                <OrderItem item={item} removeFromCart={removeFromCart} />
+                <OrderItem
+                  quantity={item.quantity}
+                  item={item}
+                  removeFromCart={removeFromCart}
+                />
               </div>
             ))}
           </div>

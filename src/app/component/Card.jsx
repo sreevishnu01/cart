@@ -39,7 +39,7 @@ function Card({ item, img, addtocart }) {
         <p className="price">AED 20.27</p>
 
         <div className="btn-group">
-          <div className="qutity">
+          {/* <div className="qutity">
             <div className="btn" onClick={handleDecrement}>
               -
             </div>
@@ -47,7 +47,7 @@ function Card({ item, img, addtocart }) {
             <div className="btn" onClick={handleIncrement}>
               +
             </div>
-          </div>
+          </div> */}
           <button className="cart-btn" onClick={() => addtocart(item)}>
             <p>Add To Cart</p>
             <div className="icon">
