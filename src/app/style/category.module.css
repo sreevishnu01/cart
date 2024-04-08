@@ -14,6 +14,7 @@
 .category .icon_container{
   background: #222;
   padding: .3rem .4rem;
+  display: none;
 }
 
 .category .icon{
@@ -26,5 +27,8 @@
 @media (max-width:768px) {
   .category{
     padding: 0;
+  }
+  .category .icon_container{
+    display: block;
   }
 }

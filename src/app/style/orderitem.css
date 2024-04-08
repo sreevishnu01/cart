@@ -55,20 +55,42 @@
  opacity: 1;
 }
 
-.qutity {
+.quantity {
   width: 30%;
+  height: 35px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0.375rem 0.25rem;
   border-radius: 0.25rem;
   border: 1px solid #aeaeae;
+  overflow: hidden;
 }
 
-.qutity span {
-  max-width: 100px;
+.quantity span {
+  max-width: 100%;
 }
 
-.qutity .btn {
+.quantity .btn {
+  padding: 1px;
+  width: 100%;
+  max-width: 20px;
+  text-align: center;
   cursor: pointer;
   user-select: none;
+  color: white;
+}
+
+.quantity_input{
+  width:  30px;
+  border: none;
+  text-align: center;
+}
+
+
+
+.quantity input[type="number"]::-webkit-inner-spin-button {
+  /* Hide the increment and decrement buttons */
+  /* display: none; */
+  opacity: 0;
 }

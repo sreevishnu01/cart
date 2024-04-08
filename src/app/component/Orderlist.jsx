@@ -22,6 +22,7 @@ const Orderlist = ({
     const existingIndex = acc.findIndex((item) => item.id === car.id);
 
     if (existingIndex !== -1) {
+      
       acc[existingIndex].quantity = (acc[existingIndex].quantity || 0) + 1; // Increment quantity for existing item
     } else {
       acc.push({ ...car, quantity: 1 }); // Create new object with quantity 1
@@ -29,7 +30,9 @@ const Orderlist = ({
 
     return acc;
   }, []);
-  console.log(carsWithQuantity);
+
+  
+
   return (
     <div className={styles.maincontainer}>
       <div className="desktop">
