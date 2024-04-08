@@ -54,3 +54,21 @@
 .remove:hover{
  opacity: 1;
 }
+
+.qutity {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.375rem 0.25rem;
+  border-radius: 0.25rem;
+  border: 1px solid #aeaeae;
+}
+
+.qutity span {
+  max-width: 100px;
+}
+
+.qutity .btn {
+  cursor: pointer;
+  user-select: none;
+}

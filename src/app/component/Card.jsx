@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 
-function Card({ item, img, addtocart }) {
+function Card({ item, img, addtocart, setrecommended }) {
   const [count, setCount] = useState(0); // Initialize state for count
 
   const handleDecrement = () => {
@@ -16,7 +16,7 @@ function Card({ item, img, addtocart }) {
   };
 
   return (
-    <div className="card">
+    <div className="card" onClick={() => setrecommended(item.releated)}>
       <div className="img-container">
         <Image
           src={img ? img : "/assets/card/card1.png"}

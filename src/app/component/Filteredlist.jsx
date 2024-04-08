@@ -4,7 +4,7 @@ import Card from "./Card";
 import styles from "../style/filteredlist.module.css";
 import { product } from "../utilss/data";
 const items = [];
-const Filteredlist = ({ addtocart }) => {
+const Filteredlist = ({ addtocart, setrecommended }) => {
   const [search, setSearch] = useState("");
   const [productItems, setProductItems] = useState(product);
 
@@ -47,7 +47,12 @@ const Filteredlist = ({ addtocart }) => {
       <div className={styles.gridcontainer}>
         {productItems.map((items, index) => (
           <div key={index}>
-            <Card item={items} img={items.img} addtocart={addtocart} />
+            <Card
+              item={items}
+              img={items.img}
+              addtocart={addtocart}
+              setrecommended={setrecommended}
+            />
           </div>
         ))}
       </div>

@@ -7,7 +7,13 @@ import DropdownMobile from "./DropdownMobile";
 import Modal from "./Modal";
 import Orderlist from "./Orderlist";
 
-const Category = ({ cart, removeFromCart }) => {
+const Category = ({
+  cart,
+  addtocart,
+  removeFromCart,
+  recommended,
+  removeFromCartOne,
+}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalCartOpen, setIsModalCartOpen] = useState(false);
 
@@ -42,7 +48,10 @@ const Category = ({ cart, removeFromCart }) => {
           <Orderlist
             cart={cart}
             ismobile={true}
+            addtocart={addtocart}
             removeFromCart={removeFromCart}
+            recommended={recommended}
+            removeFromCartOne={removeFromCartOne}
           />
         </Modal>
       )}

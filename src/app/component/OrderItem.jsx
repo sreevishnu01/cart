@@ -1,14 +1,20 @@
 import React from "react";
 import Image from "next/image";
 
-function OrderItem({ item, removeFromCart, quantity }) {
+function OrderItem({
+  item,
+  removeFromCart,
+  quantity,
+  addtocart,
+  removeFromCartOne,
+}) {
   return (
     <div>
       <div>
         <div className="order-item">
           <div className="img">
             <Image
-              src={"/assets/card/card1.png"}
+              src={item ? item.img : "/assets/card/card1.png"}
               alt="Picture of the author"
               fill
               style={{ aspectRatio: "calc(400/300)" }}
@@ -27,9 +33,17 @@ function OrderItem({ item, removeFromCart, quantity }) {
             <h2 className="product-name">{item.title}</h2>
             <p className="price">AED 20.27</p>
           </div>
-
-          <p className="price">x{quantity}</p>
-          <p>AED 20.27</p>
+          <div className="qutity">
+            <div className="btn" onClick={() => removeFromCartOne(item)}>
+              -
+            </div>
+            <span>{quantity}</span>
+            <div className="btn" onClick={() => addtocart(item)}>
+              +
+            </div>
+          </div>
+          {/* <p className="price">x{quantity}</p>
+          <p>AED 20.27</p> */}
           <div
             style={{ cursor: "pointer" }}
             onClick={() => removeFromCart(item)}

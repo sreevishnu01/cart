@@ -2,7 +2,15 @@ import React from "react";
 import OrderItem from "./OrderItem";
 import styles from "../style/orderedlist.module.css";
 import Releated from "./Releated";
-const Orderlist = ({ cart, ismobile, removeFromCart }) => {
+import { releated } from "../utilss/data";
+const Orderlist = ({
+  cart,
+  ismobile,
+  addtocart,
+  removeFromCart,
+  recommended,
+  removeFromCartOne,
+}) => {
   // const cartLengthv = cart.length();
 
   const releted = [1, 2, 3, 4];
@@ -31,9 +39,9 @@ const Orderlist = ({ cart, ismobile, removeFromCart }) => {
         </div>
 
         <div>
-          {releted?.map((item, index) => (
+          {releated[recommended].map((item, index) => (
             <div key={index} className={styles.itemcontainer1}>
-              <Releated />
+              <Releated addtocart={addtocart} item={item} />
             </div>
           ))}
         </div>
@@ -51,6 +59,8 @@ const Orderlist = ({ cart, ismobile, removeFromCart }) => {
                   quantity={item.quantity}
                   item={item}
                   removeFromCart={removeFromCart}
+                  addtocart={addtocart}
+                  removeFromCartOne={removeFromCartOne}
                 />
               </div>
             ))}
